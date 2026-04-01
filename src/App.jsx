@@ -1,22 +1,22 @@
 import { Routes, Route } from 'react-router-dom'
-import BairesHeader from './components/BairesHeader.jsx'
-import BairesFooter from './components/BairesFooter'
+import Navbar from './components/layout/Navbar.jsx'
+import Footer from './components/layout/Footer'
 import Landing from './pages/Landing'
-import OurStory from './pages/OurStory'
-import WorkPage from './pages/WorkPage'
+import About from './pages/About'
+import Work from './pages/Work'
 
 function App() {
   return (
     <>
-      <BairesHeader />
+      <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/about" element={<OurStory />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
-      <BairesFooter />
+      <Footer />
     </>
   )
 }

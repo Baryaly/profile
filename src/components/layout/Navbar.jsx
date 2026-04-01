@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import logoImg from '../../assets/images/logo.png';
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 const onAnchor = (close) => (e) => {
@@ -31,7 +32,7 @@ function Dropdown({ label, open, setOpen, children }) {
 
 const pill = 'px-2.5 py-1 md:px-3 md:py-1.5 bg-zinc-100 rounded text-xs md:text-sm hover:bg-blue-50 hover:text-blue-700';
 
-export default function Header() {
+export default function Navbar() {
   const [open, setOpen] = useState(null);
   const [mobile, setMobile] = useState(false);
   const [exp, setExp] = useState(null);
@@ -44,7 +45,7 @@ export default function Header() {
       <div className="container-main">
         <div className="flex h-16 items-center justify-between md:h-20">
           <Link to="/" className="shrink-0" onClick={() => { closeMobile(); setOpen(null); }} aria-label="Infinya - Home">
-            <img src="/logo.png" alt="Infinya" className="h-10 w-auto md:h-14" />
+            <img src={logoImg} alt="Infinya" className="h-10 w-auto md:h-14" />
           </Link>
 
           <nav className="hidden md:flex md:items-center md:gap-3">

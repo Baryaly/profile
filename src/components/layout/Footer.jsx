@@ -1,4 +1,4 @@
-export default function BairesFooter() {
+export default function Footer() {
   return (
     <footer className="bg-section-dark text-zinc-300 relative">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
